@@ -1,6 +1,6 @@
 /******************************************************************************
 ** File: osconfig.h
-** $Id: osconfig.h 1.9 2013/12/16 13:05:49GMT-05:00 acudmore Exp  $
+** $Id: osconfig.h 1.2 2013/12/16 13:07:41GMT-05:00 acudmore Exp  $
 **
 ** Purpose:
 **   This header file contains the OS API  configuration parameters.
@@ -9,14 +9,14 @@
 **
 ** Notes:
 **
-** $Date: 2013/12/16 13:05:49GMT-05:00 $
-** $Revision: 1.9 $
+** $Date: 2013/12/16 13:07:41GMT-05:00 $
+** $Revision: 1.2 $
 ** $Log: osconfig.h  $
-** Revision 1.9 2013/12/16 13:05:49GMT-05:00 acudmore 
+** Revision 1.2 2013/12/16 13:07:41GMT-05:00 acudmore 
 ** use OS_FS_PHYS_NAME_LEN macro instead of hard-coded value
-** Revision 1.1 2013/07/19 14:05:01GMT-05:00 acudmore 
+** Revision 1.1 2013/07/19 14:07:02GMT-05:00 acudmore 
 ** Initial revision
-** Member added to project c:/MKSDATA/MKS-REPOSITORY/MKS-OSAL-REPOSITORY/src/bsp/pc-linux/config/project.pj
+** Member added to project c:/MKSDATA/MKS-REPOSITORY/MKS-OSAL-REPOSITORY/src/bsp/pc-linux-ut/config/project.pj
 ** Revision 1.8 2011/12/05 12:41:15GMT-05:00 acudmore 
 ** Removed OS_MEM_TABLE_SIZE parameter
 ** Revision 1.7 2009/07/14 14:24:53EDT acudmore 
@@ -146,7 +146,7 @@
    ** loadable modules in the system. If the the table is filled up at runtime, a new module load
    ** would fail.
    */
-   #define OS_MAX_MODULES 32
+   #define OS_MAX_MODULES 10 
 
    /*
    ** The Static Loader define is used for switching between the Dynamic and Static loader implementations.

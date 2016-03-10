@@ -25,9 +25,9 @@ depend:
 	make -C ostimer-test depend 
 
 gcov:
-	make -C oscore-test gcov 
-	make -C ostimer-test gcov 
-	make -C osfilesys-test gcov 
+#	make -C oscore-test gcov 
+#	make -C ostimer-test gcov 
+#	make -C osfilesys-test gcov 
 	make -C osfile-test gcov
-	make -C osloader-test gcov 
-	make -C osnetwork-test gcov 
+	#make -C osloader-test gcov 
+	#make -C osnetwork-test gcov 

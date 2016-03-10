@@ -642,9 +642,9 @@ int32 OS_TaskCreate (uint32 *task_id, const char *task_name, osal_task_entry fun
     /*
     ** Create thread
     */
-    return_code = pthread_create(&(OS_task_table[possible_taskid].id),
+    return_code = pthread_create((pthread_t *) &(OS_task_table[possible_taskid].id),
                                  &custom_attr,
-                                 function_pointer,
+                                 (void *) function_pointer,
                                  (void *)0);
     if (return_code != 0)
     {

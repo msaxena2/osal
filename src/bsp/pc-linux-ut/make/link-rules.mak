@@ -12,7 +12,8 @@
 ##
 ## Linker flags that are needed
 ##
-LDFLAGS = -pg -fprofile-arcs -ftest-coverage
+LDFLAGS =
+#-pg -fprofile-arcs -ftest-coverage
 
 ##
 ## Libraries to link in

@@ -20,7 +20,7 @@ SYSINCS=
 ##
 ## Target Defines for the OS, Hardware Arch, etc..
 ##
-TARGET_DEFS=-D__ix86__ -D_ix86_ -D_LINUX_OS_ -D$(OS) -DX86PC -D_OSAL_UNIT_TEST_ -DBUILD=$(BUILD) -D_REENTRANT -D _EMBED_  
+TARGET_DEFS=-D__x86_64__ -D_ix64_ -D_LINUX_OS_ -D$(OS) -DX86PC -D_OSAL_UNIT_TEST_ -DBUILD=$(BUILD) -D_REENTRANT -D _EMBED_  
 
 ## 
 ## Endian Defines
@@ -30,7 +30,7 @@ ENDIAN_DEFS=-D_EL -DENDIAN=_EL -DSOFTWARE_LITTLE_BIT_ORDER
 ##
 ## Compiler Architecture Switches
 ## 
-ARCH_OPTS = -pg -fprofile-arcs -ftest-coverage
+ARCH_OPTS = 
 
 ##
 ## Application specific compiler switches 
@@ -83,9 +83,9 @@ CP=cp
 ##
 ## Compiler tools
 ##
-COMPILER=gcc
+COMPILER=kcc
 ASSEMBLER=as
-LINKER=ld
+LINKER=kcc
 AR=ar
 NM=nm
 SIZE=size

@@ -168,11 +168,16 @@ void UT_os_apiinit_test()
     if ((OS_QueueCreate(&qId, "Queue A", qDepth, qSize, qFlags) != OS_SUCCESS) &&
         (OS_BinSemCreate(&semIds[0], "BinSem 1", semInitValue, semOptions) != OS_SUCCESS) &&
         (OS_CountSemCreate(&semIds[1], "CountSem 1", semInitValue, semOptions) != OS_SUCCESS) &&
-        (OS_MutSemCreate(&semIds[2], "MutexSem 1", semOptions) != OS_SUCCESS))
-        UT_OS_SET_TEST_RESULT_MACRO(apiInfo, idx, testDesc, UT_OS_PASSED)
+        (OS_MutSemCreate(&semIds[2], "MutexSem 1", semOptions) != OS_SUCCESS)) {
+            UT_OS_SET_TEST_RESULT_MACRO(apiInfo, idx, testDesc, UT_OS_PASSED)
+	    semIds[0] = 0;
+	    semIds[1] = 0;
+	    semIds[2] = 0;
+    }
+
     else
         UT_OS_SET_TEST_RESULT_MACRO(apiInfo, idx, testDesc, UT_OS_FAILED)
-
+     
     /* Reset test environment */
     OS_QueueDelete(qId);
     OS_BinSemDelete(semIds[0]);
